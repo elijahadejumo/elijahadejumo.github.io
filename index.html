@@ -267,7 +267,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<p>&copy; 2022 Copyright <br>Designed by <a href="#" target="_blank">Adejumo Elijah</a> </p>
+					<p>&copy; <script> getFullYear()</script> <span id="current-year"></span> Copyright <br>Designed by <a href="#" target="_blank">Adejumo Elijah</a> </p>
 				</div>
 			</div>
 		</div>
@@ -292,7 +292,12 @@
 	<!-- Google Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<script src="js/google_map.js"></script>
-	
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		  const currentYear = new Date().getFullYear(); // Get the current year
+		  document.getElementById('current-year').textContent = currentYear; // Set the current year in the span
+		});
+	  </script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
